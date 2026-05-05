@@ -571,8 +571,11 @@ footer p{font-size:0.78rem;color:var(--muted);}
         'Sent from vermataxiservices.online 🌐';
 
       var encoded = encodeURIComponent(text);
-      var waUrl = 'https://wa.me/918171537292?text=' + encoded;
-      window.open(waUrl, '_blank');
+      var waUrl = 'https://api.whatsapp.com/send?phone=918171537292&text=' + encoded;
+      var win = window.open(waUrl, '_blank');
+      if (!win || win.closed || typeof win.closed == 'undefined') {
+        window.location.href = waUrl;
+      }
     }
     </script>
   </div>
