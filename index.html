@@ -259,6 +259,37 @@ footer p{font-size:0.78rem;color:var(--muted);}
   .why-grid { grid-template-columns: 1fr; }
   .stats { gap: 1rem; }
 }
+
+.veh-img-wrap { position:relative; border-radius:8px; overflow:hidden; margin-bottom:1.2rem; height:160px; }
+.veh-img { width:100%; height:100%; object-fit:cover; transition:transform 0.4s ease; }
+.veh-card:hover .veh-img { transform:scale(1.05); }
+.veh-img-badge { position:absolute; top:0.6rem; right:0.6rem; background:var(--gold); color:var(--deep); font-size:0.65rem; font-weight:700; padding:0.2rem 0.6rem; border-radius:10px; letter-spacing:0.5px; }
+.veh-book-btn { display:block; margin-top:1.2rem; background:var(--gold); color:var(--deep); text-align:center; padding:0.6rem; border-radius:4px; font-size:0.8rem; font-weight:700; text-decoration:none; letter-spacing:1px; transition:background 0.2s; }
+.veh-book-btn:hover { background:var(--gold-light); }
+
+/* SERVICES CARDS */
+.srv-card { background:white; border:1px solid #e8e4db; border-radius:12px; padding:1.5rem; transition:all 0.25s; }
+.srv-card:hover { border-color:var(--gold); transform:translateY(-3px); box-shadow:0 8px 24px rgba(200,151,42,0.12); }
+.srv-icon { font-size:2rem; margin-bottom:0.8rem; }
+.srv-card h4 { font-family:"Cormorant Garamond",serif; font-size:1.1rem; font-weight:700; color:var(--deep); margin-bottom:0.4rem; }
+.srv-card p { font-size:0.82rem; color:#5a6a7a; line-height:1.6; }
+
+/* DESTINATION CARDS */
+.dest-card-new { border-radius:12px; padding:1.2rem; text-align:center; transition:transform 0.2s; cursor:default; border:1px solid transparent; }
+.dest-card-new:hover { transform:translateY(-3px); }
+.dest-emoji { font-size:1.8rem; margin-bottom:0.5rem; }
+.dest-card-new h4 { font-family:"Cormorant Garamond",serif; font-size:1rem; font-weight:700; color:var(--cream); margin-bottom:0.2rem; }
+.dest-card-new p { font-size:0.72rem; color:var(--muted); }
+.green-d { background:rgba(59,109,17,0.15); border-color:rgba(96,188,56,0.2); }
+.amber-d { background:rgba(186,117,23,0.15); border-color:rgba(200,151,42,0.25); }
+.teal-d { background:rgba(15,110,86,0.15); border-color:rgba(93,202,165,0.2); }
+.coral-d { background:rgba(153,60,29,0.15); border-color:rgba(240,153,123,0.2); }
+
+/* MOBILE for new sections */
+@media(max-width:768px){
+  .srv-card { padding:1.2rem; }
+  .dest-card-new { padding:1rem 0.6rem; }
+}
 </style>
 </head>
 <body>
@@ -299,6 +330,138 @@ footer p{font-size:0.78rem;color:var(--muted);}
   <div class="hero-scroll">
     <span class="scroll-text">Scroll</span>
     <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services" style="background:var(--cream);color:var(--deep);">
+  <div class="section-header" style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-tag" style="color:var(--saffron);">What We Offer</div>
+    <h2 class="section-title" style="color:var(--deep);">All Taxi & Tour <em style="color:var(--gold);">Services</em></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;max-width:1000px;margin:0 auto;">
+    <div class="srv-card">
+      <div class="srv-icon">🏙️</div>
+      <h4>Local City Cab</h4>
+      <p>Daily rides around Dehradun — airport, railway, hospital, markets. Available 24/7.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">🛣️</div>
+      <h4>Outstation Trips</h4>
+      <p>One-way & round trips to Haridwar, Rishikesh, Shimla, Manali, Delhi & more.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">🛕</div>
+      <h4>Char Dham Yatra</h4>
+      <p>Full circuit pilgrimage — Yamunotri, Gangotri, Kedarnath, Badrinath with expert drivers.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">✈️</div>
+      <h4>Airport Transfers</h4>
+      <p>Dehradun (Jolly Grant) airport pickup & drop. On-time, every time.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">🏔️</div>
+      <h4>Hill Station Tours</h4>
+      <p>Mussoorie, Chakrata, Lansdowne, Auli, Chopta — scenic Uttarakhand escapes.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">👨‍👩‍👧</div>
+      <h4>Family Packages</h4>
+      <p>Customized multi-day tour packages for families with comfortable halts and sightseeing.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">🙏</div>
+      <h4>Devotional Trips</h4>
+      <p>Vaishno Devi, Haridwar, Rishikesh, Badrinath — sacred journeys done with care.</p>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">🎒</div>
+      <h4>Adventure Tours</h4>
+      <p>Trekking bases like Valley of Flowers, Kedarkantha, Har Ki Doon — we get you there.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="section" id="destinations" style="background:var(--deep2);">
+  <div class="section-header" style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-tag" style="color:var(--gold);">Where We Go</div>
+    <h2 class="section-title" style="color:var(--cream);">Popular <em style="color:var(--gold-light);">Destinations</em></h2>
+    <p style="color:var(--muted);font-size:0.9rem;margin-top:0.5rem;">Based in Dehradun · Covering all of Uttarakhand, Himachal & beyond</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;max-width:1000px;margin:0 auto;">
+    <div class="dest-card-new green-d">
+      <div class="dest-emoji">🏔️</div>
+      <h4>Mussoorie</h4>
+      <p>45 min from Dehradun</p>
+    </div>
+    <div class="dest-card-new amber-d">
+      <div class="dest-emoji">🛕</div>
+      <h4>Haridwar</h4>
+      <p>1 hr from Dehradun</p>
+    </div>
+    <div class="dest-card-new teal-d">
+      <div class="dest-emoji">🌊</div>
+      <h4>Rishikesh</h4>
+      <p>1 hr from Dehradun</p>
+    </div>
+    <div class="dest-card-new coral-d">
+      <div class="dest-emoji">❄️</div>
+      <h4>Kedarnath</h4>
+      <p>Char Dham Yatra</p>
+    </div>
+    <div class="dest-card-new green-d">
+      <div class="dest-emoji">🏔️</div>
+      <h4>Badrinath</h4>
+      <p>Char Dham Yatra</p>
+    </div>
+    <div class="dest-card-new amber-d">
+      <div class="dest-emoji">🌿</div>
+      <h4>Shimla</h4>
+      <p>6 hrs from Dehradun</p>
+    </div>
+    <div class="dest-card-new teal-d">
+      <div class="dest-emoji">🎿</div>
+      <h4>Manali</h4>
+      <p>9 hrs from Dehradun</p>
+    </div>
+    <div class="dest-card-new coral-d">
+      <div class="dest-emoji">🌸</div>
+      <h4>Auli</h4>
+      <p>Skiing & meadows</p>
+    </div>
+    <div class="dest-card-new green-d">
+      <div class="dest-emoji">🦅</div>
+      <h4>Chakrata</h4>
+      <p>Hidden hill gem</p>
+    </div>
+    <div class="dest-card-new amber-d">
+      <div class="dest-emoji">🌺</div>
+      <h4>Valley of Flowers</h4>
+      <p>UNESCO World Heritage</p>
+    </div>
+    <div class="dest-card-new teal-d">
+      <div class="dest-emoji">🏛️</div>
+      <h4>Delhi</h4>
+      <p>6 hrs from Dehradun</p>
+    </div>
+    <div class="dest-card-new coral-d">
+      <div class="dest-emoji">🐯</div>
+      <h4>Jim Corbett</h4>
+      <p>Wildlife safari trip</p>
+    </div>
+  </div>
+  <!-- Google Maps Embed -->
+  <div style="margin-top:3rem;max-width:1000px;margin-left:auto;margin-right:auto;border-radius:12px;overflow:hidden;border:1px solid rgba(200,151,42,0.2);">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.123!2d78.0148262!3d30.3142245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092bb503f1af75%3A0xf84ccc12a2838ecf!2sVerma%20taxi.%20Service%20(VTS)!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin" 
+      width="100%" 
+      height="300" 
+      style="border:0;display:block;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
   </div>
 </section>
 
